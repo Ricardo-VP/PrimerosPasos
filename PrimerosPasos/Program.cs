@@ -63,6 +63,17 @@ namespace PrimerosPasos
             Console.WriteLine("Liquido a recibir para Carlos {0}", calcularSueldo(2000, 1000));
             Console.WriteLine("Liquido a recibir para Jhon {0}", calcularSueldo(1340, 199));
 
+            Console.WriteLine();
+            figura();
+            Console.WriteLine("El cuadrado de 2 es: {0}", cuadrado(2));
+
+            Console.WriteLine();
+            Console.WriteLine("Tarea 1: Funcion con ejercicio que use condicional");
+            edad("Ricardo", 18);
+
+            Console.WriteLine();
+            Console.WriteLine("Tarea 2: Funcion con ejercicio que use un bucle");
+            tabla(10);
 
             Console.ReadKey();
         }   //Fin del MAIN
@@ -85,5 +96,50 @@ namespace PrimerosPasos
         {
             return (ingreso-egreso);
         }
+
+        //Crear la función que imprima la siguiente figura
+        //    *
+        //   ***
+        //  *****
+        // *******
+        static void figura()
+        {
+            Console.WriteLine("    *    ");
+            Console.WriteLine("   ***   ");
+            Console.WriteLine("  *****  ");
+            Console.WriteLine(" ******* ");
+        }
+
+        //Crear la función que devuelva un parámetro entero y devuelva el cuadrado de ese entero
+        static int cuadrado(int a)
+        {
+            int cuadrado = a * a;
+            return cuadrado;
+        }
+
+
+        //Tarea 1 : Funcion con ejercicio que use un condicional
+        static void edad(string nombre, int edad)
+        {
+            if (edad >= 18)
+            {
+                Console.WriteLine(nombre + " es mayor de edad con " + edad + " años");
+            }
+            else
+            {
+                Console.WriteLine(nombre + " es menor de edad con " + edad + " años");
+            }
+        }
+
+        //Tarea 2: Funcion que use un bucle 
+        static void tabla(int num)
+        {
+            int x;
+            for (x = 1; x <= 12; x++)
+            {
+                Console.WriteLine(num + " x " + x + " = "+ (num * x));
+            }
+        }
     }
+
 }
